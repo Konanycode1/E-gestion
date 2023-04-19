@@ -1,3 +1,17 @@
 #accordionSidebar, nav{
     position: fixed;
 }
+#cards{
+    height: 60vh;
+    background-color: blue;
+    border: 1px solid grey;
+}
+.listeProd{
+    display: flex;
+    flex-direction: column;
+}
+.eleProd{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
