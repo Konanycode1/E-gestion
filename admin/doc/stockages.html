@@ -58,12 +58,12 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="bi bi-boxes fa-cog"></i>
                     <span>Catégories & Produits</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
 
@@ -430,39 +430,28 @@
                                             <th>Editeur</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>N°</th>
-                                            <th>Référence</th>
-                                            <th>Libelle</th>
-                                            <th>Extimé à</th>
-                                            <th>Date Ajout</th>
-                                            <th>Date Edit</th>
-                                            <th>Editeur</th>
-                                            
-                                        </tr>
-                                    </tfoot>
                                     <tbody>
                                         <tr>
                                             <td>01</td>
                                             <td>SK00J1</td>
                                             <td>STOCKE 01</td>
-                                            <td>10 500 000</td>
+                                            <td>55 000 000</td>
                                             <td>2008/11/28</td>
                                             <td>2009/07/08</td>
                                             <th>Alphonso KOUAME</th>
                                             <th>
-                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#edite-SK00J1">
+                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal"
+                                                    data-target="#edite-SK00J1">
                                                     <i class="bi bi-pencil-square"></i>
                                                 </button>
-                                                
+                                    
                                                 <!-- Modal -->
                                                 <div class="modal fade" id="edite-SK00J1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                                                     aria-hidden="true">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Ajouter un stocke</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier la catégorie</h5>
                                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
                                                                 </button>
@@ -471,12 +460,13 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle" class="form-label">Entrer le libelle du stock</label>
+                                                                            <label for="Libelle" class="form-label">Entrer le libelle du
+                                                                                stock</label>
                                                                             <input type="text" class="form-control" id="Libelle" value="STOCKE 01">
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-0">
-                                                                            <label for="extimation" class="form-label">Montant d'extimation</label>
-                                                                            <input type="number" class="form-control" id="extimation" value="10500000">
+                                                                            <label for="extimation" class="form-label">Extimé à</label>
+                                                                            <input type="number" class="form-control" id="Libelle" value="55000000">
                                                                         </div>
                                                                     </form>
                                                                 </div>
@@ -484,39 +474,72 @@
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i
                                                                         class="bi bi-x-circle-fill"></i></i> Annuler</button>
-                                                                <button type="button" class="btn btn-primary"><i class="bi bi-send-check-fill"></i> Enrégistrer</button>
+                                                                <button type="button" class="btn btn-primary"><i class="bi bi-send-check-fill"></i>
+                                                                    Enrégistrer</button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-
+                                    
                                             </th>
                                             <th>
-                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" id="delete-SK00J1">
+                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" data-toggle="modal"
+                                                    data-target="#delete-SK00J1">
                                                     <i class="bi bi-trash3-fill"></i>
                                                 </button>
+                                    
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="delete-SK00J1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer le stocke</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    <div>
+                                                                        Voulez-vous vraiment supprimer cette catégorie <strong>SK00J1</strong> /
+                                                                        <strong>STOCKE 01</strong> ?
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-danger" data-dismiss="modal"><i
+                                                                        class="bi bi-x-circle-fill"></i></i>
+                                                                    Annuler</button>
+                                                                <button type="button" class="btn btn-primary"><i class="bi bi-check-circle-fill"></i>
+                                                                    Oui, je confirme</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </th>
                                         </tr>
                                         <tr>
                                             <td>02</td>
                                             <td>SK00J2</td>
                                             <td>STOCKE 02</td>
-                                            <td>10 500 000</td>
+                                            <td>30 000 000</td>
                                             <td>2008/11/28</td>
                                             <td>2009/07/08</td>
                                             <th>Alphonso KOUAME</th>
                                             <th>
-                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#edite-SK00J2">
+                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal"
+                                                    data-target="#edite-SK00J2">
                                                     <i class="bi bi-pencil-square"></i>
                                                 </button>
-                                                
+                                    
                                                 <!-- Modal -->
                                                 <div class="modal fade" id="edite-SK00J2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                                                     aria-hidden="true">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Ajouter un stocke</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier la catégorie</h5>
                                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
                                                                 </button>
@@ -525,37 +548,71 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle" class="form-label">Entrer le libelle du stock</label>
+                                                                            <label for="Libelle" class="form-label">Entrer le libelle du
+                                                                                stock</label>
                                                                             <input type="text" class="form-control" id="Libelle" value="STOCKE 02">
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-0">
-                                                                            <label for="extimation" class="form-label">Montant d'extimation</label>
-                                                                            <input type="number" class="form-control" id="extimation" value="10500000">
+                                                                            <label for="extimation" class="form-label">Extimé à</label>
+                                                                            <input type="number" class="form-control" id="Libelle" value="30000000">
                                                                         </div>
                                                                     </form>
                                                                 </div>
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i
-                                                                        class="bi bi-x-circle-fill"></i></i> Annuler</button>
-                                                                <button type="button" class="btn btn-primary"><i class="bi bi-send-check-fill"></i> Enrégistrer</button>
+                                                                        class="bi bi-x-circle-fill"></i></i>
+                                                                    Annuler</button>
+                                                                <button type="button" class="btn btn-primary"><i class="bi bi-send-check-fill"></i>
+                                                                    Enrégistrer</button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                
+                                    
                                             </th>
                                             <th>
-                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" id="delete-SK00J2">
+                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" data-toggle="modal"
+                                                    data-target="#delete-SK00J2">
                                                     <i class="bi bi-trash3-fill"></i>
                                                 </button>
+                                    
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="delete-SK00J2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer la catégorie</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    <div>
+                                                                        Voulez-vous vraiment supprimer cette catégorie <strong>SK00J2</strong> /
+                                                                        <strong>STOCKE 02</strong> ?
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-danger" data-dismiss="modal"><i
+                                                                        class="bi bi-x-circle-fill"></i></i>
+                                                                    Annuler</button>
+                                                                <button type="button" class="btn btn-primary"><i class="bi bi-check-circle-fill"></i>
+                                                                    Oui, je confirme</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </th>
                                         </tr>
                                         <tr>
                                             <td>03</td>
                                             <td>SK00J3</td>
                                             <td>STOCKE 03</td>
-                                            <td>10 500 000</td>
+                                            <td>15 000 000</td>
                                             <td>2008/11/28</td>
                                             <td>2009/07/08</td>
                                             <th>Alphonso KOUAME</th>
@@ -564,14 +621,14 @@
                                                     data-target="#edite-SK00J3">
                                                     <i class="bi bi-pencil-square"></i>
                                                 </button>
-                                                
+                                    
                                                 <!-- Modal -->
                                                 <div class="modal fade" id="edite-SK00J3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                                                     aria-hidden="true">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Ajouter un stocke</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier la catégorie</h5>
                                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
                                                                 </button>
@@ -580,36 +637,70 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle" class="form-label">Entrer le libelle du stock</label>
+                                                                            <label for="Libelle" class="form-label">Entrer le libelle du
+                                                                                stock</label>
                                                                             <input type="text" class="form-control" id="Libelle" value="STOCKE 03">
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-0">
-                                                                            <label for="extimation" class="form-label">Montant d'extimation</label>
-                                                                            <input type="number" class="form-control" id="extimation" value="10500000">
+                                                                            <label for="extimation" class="form-label">Extimé à</label>
+                                                                            <input type="number" class="form-control" id="Libelle" value="15000000">
                                                                         </div>
                                                                     </form>
                                                                 </div>
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i
-                                                                        class="bi bi-x-circle-fill"></i></i> Annuler</button>
-                                                                <button type="button" class="btn btn-primary"><i class="bi bi-send-check-fill"></i> Enrégistrer</button>
+                                                                        class="bi bi-x-circle-fill"></i></i>
+                                                                    Annuler</button>
+                                                                <button type="button" class="btn btn-primary"><i class="bi bi-send-check-fill"></i>
+                                                                    Enrégistrer</button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </th>
                                             <th>
-                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" id="delete-SK00J3">
+                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" data-toggle="modal"
+                                                    data-target="#delete-SK00J3">
                                                     <i class="bi bi-trash3-fill"></i>
                                                 </button>
+                                    
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="delete-SK00J3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer la catégorie</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    <div>
+                                                                        Voulez-vous vraiment supprimer cette catégorie <strong>SK00J3</strong> /
+                                                                        <strong>STOCKE 03</strong> ?
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-danger" data-dismiss="modal"><i
+                                                                        class="bi bi-x-circle-fill"></i></i>
+                                                                    Annuler</button>
+                                                                <button type="button" class="btn btn-primary"><i class="bi bi-check-circle-fill"></i>
+                                                                    Oui, je confirme</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </th>
                                         </tr>
                                         <tr>
                                             <td>04</td>
                                             <td>SK00J4</td>
                                             <td>STOCKE 04</td>
-                                            <td>10 500 000</td>
+                                            <td>25 000 000</td>
                                             <td>2008/11/28</td>
                                             <td>2009/07/08</td>
                                             <th>Alphonso KOUAME</th>
@@ -618,14 +709,14 @@
                                                     data-target="#edite-SK00J4">
                                                     <i class="bi bi-pencil-square"></i>
                                                 </button>
-                                                
+                                    
                                                 <!-- Modal -->
                                                 <div class="modal fade" id="edite-SK00J4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                                                     aria-hidden="true">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Ajouter un stocke</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier la catégorie</h5>
                                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
                                                                 </button>
@@ -634,36 +725,70 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle" class="form-label">Entrer le libelle du stock</label>
+                                                                            <label for="Libelle" class="form-label">Entrer le libelle du
+                                                                                stock</label>
                                                                             <input type="text" class="form-control" id="Libelle" value="STOCKE 04">
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-0">
-                                                                            <label for="extimation" class="form-label">Montant d'extimation</label>
-                                                                            <input type="number" class="form-control" id="extimation" value="10500000">
+                                                                            <label for="extimation" class="form-label">Extimé à</label>
+                                                                            <input type="number" class="form-control" id="Libelle" value="25000000">
                                                                         </div>
                                                                     </form>
                                                                 </div>
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i
-                                                                        class="bi bi-x-circle-fill"></i></i> Annuler</button>
-                                                                <button type="button" class="btn btn-primary"><i class="bi bi-send-check-fill"></i> Enrégistrer</button>
+                                                                        class="bi bi-x-circle-fill"></i></i>
+                                                                    Annuler</button>
+                                                                <button type="button" class="btn btn-primary"><i class="bi bi-send-check-fill"></i>
+                                                                    Enrégistrer</button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </th>
                                             <th>
-                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" id="delete-SK00J4">
+                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" data-toggle="modal"
+                                                    data-target="#delete-SK00J4">
                                                     <i class="bi bi-trash3-fill"></i>
                                                 </button>
+                                    
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="delete-SK00J4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer la catégorie</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    <div>
+                                                                        Voulez-vous vraiment supprimer cette catégorie <strong>SK00J4</strong> /
+                                                                        <strong>STOCKE 04</strong> ?
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-danger" data-dismiss="modal"><i
+                                                                        class="bi bi-x-circle-fill"></i></i>
+                                                                    Annuler</button>
+                                                                <button type="button" class="btn btn-primary"><i class="bi bi-check-circle-fill"></i>
+                                                                    Oui, je confirme</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </th>
                                         </tr>
                                         <tr>
                                             <td>05</td>
                                             <td>SK00J5</td>
                                             <td>STOCKE 05</td>
-                                            <td>5 000 000</td>
+                                            <td>12 000 000</td>
                                             <td>2008/11/28</td>
                                             <td>2009/07/08</td>
                                             <th>Alphonso KOUAME</th>
@@ -672,14 +797,14 @@
                                                     data-target="#edite-SK00J5">
                                                     <i class="bi bi-pencil-square"></i>
                                                 </button>
-                                                
+                                    
                                                 <!-- Modal -->
                                                 <div class="modal fade" id="edite-SK00J5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                                                     aria-hidden="true">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Ajouter un stocke</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier la catégorie</h5>
                                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
                                                                 </button>
@@ -688,33 +813,255 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle" class="form-label">Entrer le libelle du stock</label>
+                                                                            <label for="Libelle" class="form-label">Entrer le libelle du
+                                                                                stock</label>
                                                                             <input type="text" class="form-control" id="Libelle" value="STOCKE 05">
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-0">
-                                                                            <label for="extimation" class="form-label">Montant d'extimation</label>
-                                                                            <input type="number" class="form-control" id="extimation" value="5000000">
+                                                                            <label for="extimation" class="form-label">Extimé à</label>
+                                                                            <input type="number" class="form-control" id="Libelle" value="12000000">
                                                                         </div>
                                                                     </form>
                                                                 </div>
                                                             </div>
                                                             <div class="modal-footer">
-                                                                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="bi bi-x-circle-fill"></i></i> Annuler</button>
-                                                                <button type="button" class="btn btn-primary"><i class="bi bi-send-check-fill"></i> Enrégistrer</button>
+                                                                <button type="button" class="btn btn-danger" data-dismiss="modal"><i
+                                                                        class="bi bi-x-circle-fill"></i></i>
+                                                                    Annuler</button>
+                                                                <button type="button" class="btn btn-primary"><i class="bi bi-send-check-fill"></i>
+                                                                    Enrégistrer</button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </th>
                                             <th>
-                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" id="delete-SK00J5">
+                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" data-toggle="modal"
+                                                    data-target="#delete-SK00J5">
                                                     <i class="bi bi-trash3-fill"></i>
                                                 </button>
+                                    
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="delete-SK00J5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer la catégorie</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    Voulez-vous vraiment supprimer cette catégorie <strong>SK00J5</strong> / <strong>STOCKE
+                                                                        05</strong> ?
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-danger" data-dismiss="modal"><i
+                                                                        class="bi bi-x-circle-fill"></i></i>
+                                                                    Annuler</button>
+                                                                <button type="button" class="btn btn-primary"><i class="bi bi-check-circle-fill"></i>
+                                                                    Oui, je confirme</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>06</td>
+                                            <td>SK00J6</td>
+                                            <td>STOCKE 06</td>
+                                            <td>5 000 000</td>
+                                            <td>2008/11/28</td>
+                                            <td>2009/07/08</td>
+                                            <th>Alphonso KOUAME</th>
+                                            <th>
+                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal"
+                                                    data-target="#edite-SK00J6">
+                                                    <i class="bi bi-pencil-square"></i>
+                                                </button>
+                                    
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="edite-SK00J6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier la catégorie</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    <form class="users">
+                                                                        <div class="col-sm-12 mb-3 mb-sm-4">
+                                                                            <label for="Libelle" class="form-label">Entrer le libelle du
+                                                                                stock</label>
+                                                                            <input type="text" class="form-control" id="Libelle" value="STOCKE 06">
+                                                                        </div>
+                                                                        <div class="col-sm-12 mb-3 mb-sm-0">
+                                                                            <label for="extimation" class="form-label">Description résumé</label>
+                                                                            <textarea type="number" class="form-control"
+                                                                                id="extimation">Phrase ou texte</textarea>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-danger" data-dismiss="modal"><i
+                                                                        class="bi bi-x-circle-fill"></i></i>
+                                                                    Annuler</button>
+                                                                <button type="button" class="btn btn-primary"><i class="bi bi-send-check-fill"></i>
+                                                                    Enrégistrer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" data-toggle="modal"
+                                                    data-target="#delete-SK00J6">
+                                                    <i class="bi bi-trash3-fill"></i>
+                                                </button>
+                                    
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="delete-SK00J6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer la catégorie</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    Voulez-vous vraiment supprimer cette catégorie <strong>SK00J6</strong> / <strong>STOCKE
+                                                                        06</strong> ?
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-danger" data-dismiss="modal"><i
+                                                                        class="bi bi-x-circle-fill"></i></i>
+                                                                    Annuler</button>
+                                                                <button type="button" class="btn btn-primary"><i class="bi bi-check-circle-fill"></i>
+                                                                    Oui, je confirme</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>07</td>
+                                            <td>SK00J7</td>
+                                            <td>STOCKE 07</td>
+                                            <td>9 500 000</td>
+                                            <td>2008/11/28</td>
+                                            <td>2009/07/08</td>
+                                            <th>Alphonso KOUAME</th>
+                                            <th>
+                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal"
+                                                    data-target="#edite-SK00J7">
+                                                    <i class="bi bi-pencil-square"></i>
+                                                </button>
+                                    
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="edite-SK00J7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier la catégorie</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    <form class="users">
+                                                                        <div class="col-sm-12 mb-3 mb-sm-4">
+                                                                            <label for="Libelle" class="form-label">Entrer le libelle du
+                                                                                stock</label>
+                                                                            <input type="text" class="form-control" id="Libelle" value="STOCKE 06">
+                                                                        </div>
+                                                                        <div class="col-sm-12 mb-3 mb-sm-0">
+                                                                            <label for="extimation" class="form-label">Extimé à</label>
+                                                                            <input type="number" class="form-control" id="Libelle" value="9500000">
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-danger" data-dismiss="modal"><i
+                                                                        class="bi bi-x-circle-fill"></i></i>
+                                                                    Annuler</button>
+                                                                <button type="button" class="btn btn-primary"><i class="bi bi-send-check-fill"></i>
+                                                                    Enrégistrer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" data-toggle="modal"
+                                                    data-target="#delete-SK00J6">
+                                                    <i class="bi bi-trash3-fill"></i>
+                                                </button>
+                                    
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="delete-SK00J6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer la catégorie</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    Voulez-vous vraiment supprimer cette catégorie <strong>SK00J7</strong> / <strong>STOCKE
+                                                                        07</strong> ?
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-danger" data-dismiss="modal"><i
+                                                                        class="bi bi-x-circle-fill"></i></i>
+                                                                    Annuler</button>
+                                                                <button type="button" class="btn btn-primary"><i class="bi bi-check-circle-fill"></i>
+                                                                    Oui, je confirme</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </th>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
+                            <nav aria-label="..." class="d-flex justify-content-center">
+                                <ul class="pagination">
+                                    <li class="page-item disabled">
+                                        <span class="page-link">Précédent</span>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active" aria-current="page">
+                                        <span class="page-link">2</span>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Suivant</a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
