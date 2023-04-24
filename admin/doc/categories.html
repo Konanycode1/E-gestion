@@ -56,7 +56,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="bi bi-boxes fa-cog"></i>
                     <span>Catégories & Produits</span>
@@ -73,26 +73,111 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- Nav Item - Action Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Action sur stocks</span>
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseAction" aria-expanded="true"
+                    aria-controls="collapseAction">
+                    <i class="bi bi-gear-wide-connected"></i>
+                    <span>Actions sur stocks</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                <div id="collapseAction" class="collapse" aria-labelledby="headingAction"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="articlesSortants.html"><i class="bi bi-box-arrow-in-left "></i>
+                        <h6 class="collapse-header">Custom Actions:</h6>
+                        <a class="collapse-item" href="articlesSortants.html"><i class="bi bi-box-arrow-right"></i>
                             Articles sortants</a>
-                        <a class="collapse-item" href="articlesRestants.html"><i class="bi bi-box-arrow-right"></i>
-                            Articles restants</a>
-                        <a class="collapse-item" href="articlesManquants.html">Articles en manque</a>
-                        <a class="collapse-item" href="plusConsommes.html">Les plus consommés</a>
-                        <a class="collapse-item" href="moinsConsommes.html">Les moins consommés</a>
+                        <a class="collapse-item" href="articlesRestants.html"><i
+                                class="bi  bi-box-arrow-in-left"></i> Articles restants</a>
                     </div>
                 </div>
+            </li>
+
+            <!-- Nav Item - Statistique Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseStatistique"
+                    aria-expanded="true" aria-controls="collapseStatistique">
+                    <i class="bi bi-graph-down"></i> <span>Statistiques</span>
+                </a>
+                <div id="collapseStatistique" class="collapse" aria-labelledby="headingStatistique"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Statistiques:</h6>
+                        <a class="collapse-item" href="articlesManquants.html"> <i class="bi bi-cast"> </i> Articles en
+                            manque</a>
+                        <a class="collapse-item" href="plusConsommes.html"> <i class="bi bi-graph-up-arrow"> </i> Les
+                            plus consommés</a>
+                        <a class="collapse-item" href="moinsConsommes.html"> <i class="bi bi-graph-down-arrow"> </i> Les
+                            moins consommés</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseVentes" aria-expanded="true"
+                    aria-controls="collapseVentes">
+                    <i class="bi bi-graph-down"></i> <span>Ventes</span>
+                </a>
+                <div id="collapseVentes" class="collapse" aria-labelledby="headingVentes"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Ventes:</h6>
+                        <a class="collapse-item" href="articlesManquants.html"> <i class="bi bi-cast"> </i> Vente
+                            d'aujourd'hui</a>
+                        <a class="collapse-item" href="plusConsommes.html"> <i class="bi bi-graph-up-arrow"> </i> Vente
+                            de la semaine</a>
+                        <a class="collapse-item" href="moinsConsommes.html"> <i class="bi bi-graph-down-arrow"> </i>
+                            Vente du mois</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Charts</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">Addons</div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pages</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Login Screens:</h6>
+                        <a class="collapse-item" href="connexion.html">Connexion</a>
+                        <a class="collapse-item" href="inscription.html">S'inscrire</a>
+                        <a class="collapse-item" href="forgot-password.html">Mot de passe oublié</a>
+                        <div class="collapse-divider"></div>
+                        <h6 class="collapse-header">Other Pages:</h6>
+                        <a class="collapse-item" href="404.html">404 Page</a>
+                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Charts</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tables</span></a>
             </li>
 
             <!-- Divider -->
@@ -115,7 +200,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-2 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -354,10 +439,8 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger" data-dismiss="modal"><i
-                                                class="bi bi-x-circle-fill"></i></i> Annuler</button>
-                                        <button type="button" class="btn btn-primary"><i
-                                                class="bi bi-send-check-fill"></i> Enrégistrer</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="bi bi-x-circle-fill"></i></i> Annuler</button>
+                                        <button type="button" class="btn btn-primary"><i class="bi bi-send-check-fill"></i> Enrégistrer</button>
                                     </div>
                                 </div>
                             </div>
