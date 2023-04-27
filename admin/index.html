@@ -67,10 +67,10 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
 
-                        <a class="collapse-item" href="doc/stockages.html"><i class="bi bi-server"> </i> Stocks</a>
-                        <a class="collapse-item" href="doc/categories.html"><i class="bi bi-diagram-3-fill"> </i>
+                        <a class="collapse-item" href="stockages.html"><i class="bi bi-server"> </i> Stocks</a>
+                        <a class="collapse-item" href="categories.html"><i class="bi bi-diagram-3-fill"> </i>
                             Catégories</a>
-                        <a class="collapse-item" href="doc/produits.html"><i class="bi bi-pie-chart-fill"> </i> Produits</a>
+                        <a class="collapse-item" href="produits.html"><i class="bi bi-pie-chart-fill"> </i> Produits</a>
                     </div>
                 </div>
             </li>
@@ -86,10 +86,10 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Actions:</h6>
-                        <a class="collapse-item" href="doc/articlesSortants.html"><i class="bi bi-box-arrow-right"></i>
+                        <a class="collapse-item" href="articlesSortants.html"><i class="bi bi-box-arrow-right"></i>
                             Articles sortants</a>
-                        <a class="collapse-item" href="doc/articlesRestants.html"><i
-                                class="bi  bi-box-arrow-in-left"></i> Articles restants</a>
+                        <a class="collapse-item" href="articlesRestants.html"><i class="bi  bi-box-arrow-in-left"></i>
+                            Articles restants</a>
                     </div>
                 </div>
             </li>
@@ -104,11 +104,11 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Statistiques:</h6>
-                        <a class="collapse-item" href="doc/articlesManquants.html"> <i class="bi bi-cast"> </i> Articles en
+                        <a class="collapse-item" href="articlesManquants.html"> <i class="bi bi-cast"> </i> Articles en
                             manque</a>
-                        <a class="collapse-item" href="doc/plusConsommes.html"> <i class="bi bi-graph-up-arrow"> </i> Les
+                        <a class="collapse-item" href="plusConsommes.html"> <i class="bi bi-graph-up-arrow"> </i> Les
                             plus consommés</a>
-                        <a class="collapse-item" href="doc/moinsConsommes.html"> <i class="bi bi-graph-down-arrow"> </i> Les
+                        <a class="collapse-item" href="moinsConsommes.html"> <i class="bi bi-graph-down-arrow"> </i> Les
                             moins consommés</a>
                     </div>
                 </div>
@@ -123,16 +123,34 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Ventes:</h6>
-                        <a class="collapse-item" href="doc/articlesManquants.html"> <i class="bi bi-cast"> </i> Vente
+                        <a class="collapse-item" href="venteJour.html"> <i class="bi bi-cast"> </i> Vente
                             d'aujourd'hui</a>
-                        <a class="collapse-item" href="doc/plusConsommes.html"> <i class="bi bi-graph-up-arrow"> </i> Vente
+                        <a class="collapse-item" href="venteSemaine.html"> <i class="bi bi-graph-up-arrow"> </i> Vente
                             de la semaine</a>
-                        <a class="collapse-item" href="doc/moinsConsommes.html"> <i class="bi bi-graph-down-arrow"> </i>
+                        <a class="collapse-item" href="venteMois.html"> <i class="bi bi-graph-down-arrow"> </i>
                             Vente du mois</a>
                     </div>
                 </div>
             </li>
-            
+
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseGerer" aria-expanded="true"
+                    aria-controls="collapseGerer">
+                    <i class="bi bi-graph-down"></i> <span>Gérer stockes</span>
+                </a>
+                <div id="collapseGerer" class="collapse" aria-labelledby="headingVentes"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Gérer stockes:</h6>
+                        <a class="collapse-item" href="suspendreArticles.html"> <i class="bi bi-cast"> </i> Suspendre
+                            artices</a>
+                        <a class="collapse-item" href="articleSuspendus.html"> <i class="bi bi-graph-up-arrow"> </i>
+                            Articles
+                            suspendus</a>
+                    </div>
+                </div>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -361,10 +379,11 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Tableau de bord</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 
-                     <!-- Content Row -->
+                    <!-- Content Row -->
                     <div class="row">
                         <!-- PRODUITS ENTRANTS Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
@@ -372,9 +391,13 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">PRODUITS ENTRANTS</div>
-                                            <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Quantité: <span  class="text-success">1000</span></div>
-                                            <div class="h7 mb-0 font-weight-bold">Extimé à <span class="text-success">1 700 000 frs</span></div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">
+                                                PRODUITS ENTRANTS</div>
+                                            <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Quantité:
+                                                <span class="text-success">1000</span>
+                                            </div>
+                                            <div class="h7 mb-0 font-weight-bold">Extimé à <span class="text-success">1
+                                                    700 000 frs</span></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="bi bi-box-arrow-in-left fa-2x text-gray-300"></i>
@@ -390,9 +413,13 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">PRODUITS SORTANTS</div>
-                                            <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Quantité: <span  class="text-success">800</span></div>
-                                            <div class="h7 mb-0 font-weight-bold">Extimé à <span  class="text-success">1 150 000 frs</span></div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">
+                                                PRODUITS SORTANTS</div>
+                                            <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Quantité:
+                                                <span class="text-success">800</span>
+                                            </div>
+                                            <div class="h7 mb-0 font-weight-bold">Extimé à <span class="text-success">1
+                                                    150 000 frs</span></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="bi bi-box-arrow-right fa-2x text-gray-300"></i>
@@ -408,11 +435,14 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">PRODUITS RESTANTS</div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">
+                                                PRODUITS RESTANTS</div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Quantité: <span  class="text-success">200</span></div>
-                                                    <div class="h6 mb-0 font-weight-bold">Extimé à <span  class="text-success">550 000 frs</span></div>
+                                                    <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">
+                                                        Quantité: <span class="text-success">200</span></div>
+                                                    <div class="h6 mb-0 font-weight-bold">Extimé à <span
+                                                            class="text-success">550 000 frs</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -430,8 +460,11 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">PRODUITS EN MANQUE</div>
-                                            <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Quantité: <span  class="text-success">07</span></div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">
+                                                PRODUITS EN MANQUE</div>
+                                            <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Quantité:
+                                                <span class="text-success">07</span>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="bi bi-cast fa-2x text-gray-300  "></i>
@@ -447,8 +480,11 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">LES PLUS CONSOMMES</div>
-                                            <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Quantité: <span  class="text-success">38</span></div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">LES
+                                                PLUS CONSOMMES</div>
+                                            <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Quantité:
+                                                <span class="text-success">38</span>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="bi bi-graph-up-arrow fa-2x text-gray-300"></i>
@@ -464,8 +500,11 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">LES MOINS CONSOMMES</div>
-                                            <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Quantité: <span  class="text-success">17</span></div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">LES
+                                                MOINS CONSOMMES</div>
+                                            <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Quantité:
+                                                <span class="text-success">17</span>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="bi bi-graph-down-arrow fa-2x text-gray-300"></i>
@@ -481,9 +520,13 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">VENTE DE LA SEMAINE</div>
-                                            <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Quantité: <span  class="text-success">150</span></div>
-                                            <div class="h6 mb-0 font-weight-bold">Extimé à <span  class="text-success">750.000 frs</span></div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">VENTE
+                                                DE LA SEMAINE</div>
+                                            <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Quantité:
+                                                <span class="text-success">150</span>
+                                            </div>
+                                            <div class="h6 mb-0 font-weight-bold">Extimé à <span
+                                                    class="text-success">750.000 frs</span></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="bi bi-bar-chart-line fa-2x text-gray-300"></i>
@@ -499,9 +542,13 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">NOMBRE DE COMMANDES</div>
-                                            <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Quantité: <span  class="text-success">12</span></div>
-                                            <div class="h6 mb-0 font-weight-bold">Extimé à <span  class="text-success">250.000 frs</span></div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">
+                                                NOMBRE DE COMMANDES</div>
+                                            <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Quantité:
+                                                <span class="text-success">12</span>
+                                            </div>
+                                            <div class="h6 mb-0 font-weight-bold">Extimé à <span
+                                                    class="text-success">250.000 frs</span></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="bi bi-card-checklist fa-2x text-gray-300"></i>
@@ -517,7 +564,8 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">ETAT DE LA BOUTIQUE</div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">ETAT
+                                                DE LA BOUTIQUE</div>
                                             <div class="h6 mb-0 font-weight-bold text-gray-800">Ouverte </div>
                                         </div>
                                         <div class="col-auto">
@@ -534,7 +582,8 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">LUNDI - SAMEDI</div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">LUNDI
+                                                - SAMEDI</div>
                                             <div class="h6 mb-0 font-weight-bold text-gray-800">08H30 à 20H00</div>
                                         </div>
                                         <div class="col-auto">
@@ -551,7 +600,8 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">DIMANCHE</div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">
+                                                DIMANCHE</div>
                                             <div class="h6 mb-0 font-weight-bold text-gray-800">08H30 à 14H00</div>
                                         </div>
                                         <div class="col-auto">
@@ -568,8 +618,10 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">CATEGORIE DE PRODUITS</div>
-                                            <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Totale: <span  class="text-success">150</span></div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-3">
+                                                CATEGORIE DE PRODUITS</div>
+                                            <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800 mb-2">Totale: <span
+                                                    class="text-success">150</span></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="bi bi-diagram-3-fill fa-2x text-gray-300"></i>
@@ -618,10 +670,11 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Sélectionnez "Déconnexion" ci-dessous si vous êtes prêt à mettre fin à votre session en cours.</div>
+                <div class="modal-body">Sélectionnez "Déconnexion" ci-dessous si vous êtes prêt à mettre fin à votre
+                    session en cours.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Annuler</button>
-                    <a class="btn btn-primary" href="doc/connexion.html">Déconnexion</a>
+                    <a class="btn btn-primary" href="connexion.html">Déconnexion</a>
                 </div>
             </div>
         </div>
@@ -643,7 +696,7 @@
     <!-- Page level custom scripts -->
     <script src="./../assets/js/demo/chart-area-demo.js"></script>
     <script src="./../assets/js/demo/chart-pie-demo.js"></script>
-    
+
 
 </body>
 

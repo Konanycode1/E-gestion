@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E-Gestion | Articles restants</title>
+    <title>E-Gestion | Tableau de bord</title>
 
     <!-- Custom fonts for this template-->
     <link href="./../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -33,7 +33,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="./../index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -45,9 +45,9 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="./../index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Tableau de bord</span></a>
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i><span>Tableau de bord</span>
+                </a>
             </li>
 
             <!-- Divider -->
@@ -77,8 +77,8 @@
 
             <!-- Nav Item - Action Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseAction"
-                    aria-expanded="true" aria-controls="collapseAction">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseAction" aria-expanded="true"
+                    aria-controls="collapseAction">
                     <i class="bi bi-gear-wide-connected"></i>
                     <span>Actions sur stocks</span>
                 </a>
@@ -86,88 +86,70 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Actions:</h6>
-                        <a class="collapse-item" href="articlesSortants.html"><i class="bi bi-box-arrow-right"></i> Articles sortants</a>
-                        <a class="collapse-item active" href="articlesRestants.html"><i class="bi  bi-box-arrow-in-left"></i> Articles restants</a>
+                        <a class="collapse-item" href="articlesSortants.html"><i class="bi bi-box-arrow-right"></i>
+                            Articles sortants</a>
+                        <a class="collapse-item active" href="articlesRestants.html"><i
+                                class="bi  bi-box-arrow-in-left"></i>
+                            Articles restants</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Statistique Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseStatistique" aria-expanded="true" aria-controls="collapseStatistique">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseStatistique"
+                    aria-expanded="true" aria-controls="collapseStatistique">
                     <i class="bi bi-graph-down"></i> <span>Statistiques</span>
                 </a>
-                <div id="collapseStatistique" class="collapse" aria-labelledby="headingStatistique" data-parent="#accordionSidebar">
+                <div id="collapseStatistique" class="collapse" aria-labelledby="headingStatistique"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Statistiques:</h6>
-                        <a class="collapse-item" href="articlesManquants.html"> <i class="bi bi-cast"> </i> Articles en manque</a>
-                        <a class="collapse-item" href="plusConsommes.html"> <i class="bi bi-graph-up-arrow"> </i> Les plus consommés</a>
-                        <a class="collapse-item" href="moinsConsommes.html"> <i class="bi bi-graph-down-arrow"> </i> Les moins consommés</a>
+                        <a class="collapse-item" href="articlesManquants.html"> <i class="bi bi-cast"> </i> Articles en
+                            manque</a>
+                        <a class="collapse-item" href="plusConsommes.html"> <i class="bi bi-graph-up-arrow"> </i> Les
+                            plus consommés</a>
+                        <a class="collapse-item" href="moinsConsommes.html"> <i class="bi bi-graph-down-arrow"> </i> Les
+                            moins consommés</a>
                     </div>
                 </div>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseVentes" aria-expanded="true" aria-controls="collapseVentes">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseVentes" aria-expanded="true"
+                    aria-controls="collapseVentes">
                     <i class="bi bi-graph-down"></i> <span>Ventes</span>
                 </a>
-                <div id="collapseVentes" class="collapse" aria-labelledby="headingVentes" data-parent="#accordionSidebar">
+                <div id="collapseVentes" class="collapse" aria-labelledby="headingVentes"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Ventes:</h6>
-                        <a class="collapse-item" href="articlesManquants.html"> <i class="bi bi-cast"> </i> Vente d'aujourd'hui</a>
-                        <a class="collapse-item" href="plusConsommes.html"> <i class="bi bi-graph-up-arrow"> </i> Vente de la semaine</a>
-                        <a class="collapse-item" href="moinsConsommes.html"> <i class="bi bi-graph-down-arrow"> </i> Vente du mois</a>
+                        <a class="collapse-item" href="venteJour.html"> <i class="bi bi-cast"> </i> Vente
+                            d'aujourd'hui</a>
+                        <a class="collapse-item" href="venteSemaine.html"> <i class="bi bi-graph-up-arrow"> </i> Vente
+                            de la semaine</a>
+                        <a class="collapse-item" href="venteMois.html"> <i class="bi bi-graph-down-arrow"> </i>
+                            Vente du mois</a>
                     </div>
                 </div>
             </li>
 
-            <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span>
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseGerer" aria-expanded="true"
+                    aria-controls="collapseGerer">
+                    <i class="bi bi-graph-down"></i> <span>Gérer stockes</span>
                 </a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">Addons</div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div id="collapseGerer" class="collapse" aria-labelledby="headingVentes"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="connexion.html">Connexion</a>
-                        <a class="collapse-item" href="inscription.html">S'inscrire</a>
-                        <a class="collapse-item" href="forgot-password.html">Mot de passe oublié</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                        <h6 class="collapse-header">Custom Gérer stockes:</h6>
+                        <a class="collapse-item" href="suspendreArticles.html"> <i class="bi bi-cast"> </i> Suspendre
+                            artices</a>
+                        <a class="collapse-item" href="articleSuspendus.html"> <i class="bi bi-graph-up-arrow"> </i>
+                            Articles
+                            suspendus</a>
                     </div>
                 </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
             </li>
 
             <!-- Divider -->
@@ -441,7 +423,7 @@
                                             </td>
                                             <td>2008/11/28</td>
                                             <td>2009/07/08</td>
-                                            
+
                                         </tr>
                                         <tr>
                                             <td>02</td>
@@ -458,7 +440,7 @@
                                             </td>
                                             <td>2008/11/28</td>
                                             <td>2009/07/08</td>
-                                            
+
 
                                         </tr>
                                         <tr>
@@ -476,7 +458,7 @@
                                             </td>
                                             <td>2008/11/28</td>
                                             <td>2009/07/08</td>
-                                            
+
                                         </tr>
                                         <tr>
                                             <td>04</td>
@@ -493,7 +475,7 @@
                                             </td>
                                             <td>2008/11/28</td>
                                             <td>2009/07/08</td>
-                                            
+
 
                                         </tr>
                                         <tr>
@@ -511,7 +493,7 @@
                                             </td>
                                             <td>2008/11/28</td>
                                             <td>2009/07/08</td>
-                                            
+
 
                                         </tr>
                                         <tr>
@@ -529,7 +511,7 @@
                                             </td>
                                             <td>2008/11/28</td>
                                             <td>2009/07/08</td>
-                                            
+
 
                                         </tr>
 
@@ -548,7 +530,7 @@
                                             </td>
                                             <td>2008/11/28</td>
                                             <td>2009/07/08</td>
-                                            
+
 
                                         </tr>
                                     </tbody>

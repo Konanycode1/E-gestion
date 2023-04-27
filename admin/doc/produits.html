@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E-Gestion | Articles</title>
+    <title>E-Gestion | Tableau de bord</title>
 
     <!-- Custom fonts for this template-->
     <link href="./../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -33,7 +33,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="./../index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -45,9 +45,9 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="./../index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Tableau de bord</span></a>
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i><span>Tableau de bord</span>
+                </a>
             </li>
 
             <!-- Divider -->
@@ -63,14 +63,16 @@
                     <i class="bi bi-boxes fa-cog"></i>
                     <span>Catégories & Produits</span>
                 </a>
-                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
 
                         <a class="collapse-item" href="stockages.html"><i class="bi bi-server"> </i> Stocks</a>
                         <a class="collapse-item" href="categories.html"><i class="bi bi-diagram-3-fill"> </i>
                             Catégories</a>
-                        <a class="collapse-item active" href="produits.html"><i class="bi bi-pie-chart-fill"> </i> Produits</a>
+                        <a class="collapse-item active" href="produits.html"><i class="bi bi-pie-chart-fill"> </i>
+                            Produits</a>
                     </div>
                 </div>
             </li>
@@ -88,8 +90,8 @@
                         <h6 class="collapse-header">Custom Actions:</h6>
                         <a class="collapse-item" href="articlesSortants.html"><i class="bi bi-box-arrow-right"></i>
                             Articles sortants</a>
-                        <a class="collapse-item" href="articlesRestants.html"><i
-                                class="bi  bi-box-arrow-in-left"></i> Articles restants</a>
+                        <a class="collapse-item" href="articlesRestants.html"><i class="bi  bi-box-arrow-in-left"></i>
+                            Articles restants</a>
                     </div>
                 </div>
             </li>
@@ -123,63 +125,32 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Ventes:</h6>
-                        <a class="collapse-item" href="articlesManquants.html"> <i class="bi bi-cast"> </i> Vente
+                        <a class="collapse-item" href="venteJour.html"> <i class="bi bi-cast"> </i> Vente
                             d'aujourd'hui</a>
-                        <a class="collapse-item" href="plusConsommes.html"> <i class="bi bi-graph-up-arrow"> </i> Vente
+                        <a class="collapse-item" href="venteSemaine.html"> <i class="bi bi-graph-up-arrow"> </i> Vente
                             de la semaine</a>
-                        <a class="collapse-item" href="moinsConsommes.html"> <i class="bi bi-graph-down-arrow"> </i>
+                        <a class="collapse-item" href="venteMois.html"> <i class="bi bi-graph-down-arrow"> </i>
                             Vente du mois</a>
                     </div>
                 </div>
             </li>
 
-            <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span>
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseGerer" aria-expanded="true"
+                    aria-controls="collapseGerer">
+                    <i class="bi bi-graph-down"></i> <span>Gérer stockes</span>
                 </a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">Addons</div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div id="collapseGerer" class="collapse" aria-labelledby="headingVentes"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="connexion.html">Connexion</a>
-                        <a class="collapse-item" href="inscription.html">S'inscrire</a>
-                        <a class="collapse-item" href="forgot-password.html">Mot de passe oublié</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                        <h6 class="collapse-header">Custom Gérer stockes:</h6>
+                        <a class="collapse-item" href="suspendreArticles.html"> <i class="bi bi-cast"> </i> Suspendre
+                            artices</a>
+                        <a class="collapse-item" href="articleSuspendus.html"> <i class="bi bi-graph-up-arrow"> </i>
+                            Articles
+                            suspendus</a>
                     </div>
                 </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
             </li>
 
             <!-- Divider -->
@@ -436,20 +407,23 @@
                                                     </select>
                                                 </div>
                                                 <div class="col-sm-12 mb-3 mb-sm-4">
-                                                    <label for="libelle" class="form-label">Choisir la catégorie de l'article</label>
+                                                    <label for="libelle" class="form-label">Choisir la catégorie de
+                                                        l'article</label>
                                                     <select class="custom-select" name="" id="">
                                                         <option value="">Catégorie</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-sm-12 mb-3 mb-sm-4">
-                                                    <label for="libelle" class="form-label">Entrer le libelle de la catégorie</label>
-                                                    <input type="text" class="form-control" id="libelle" placeholder="Libelle de la catégorie">
+                                                    <label for="libelle" class="form-label">Entrer le libelle de la
+                                                        catégorie</label>
+                                                    <input type="text" class="form-control" id="libelle"
+                                                        placeholder="Libelle de la catégorie">
                                                 </div>
-                                                <div class="col-sm-12 mb-3 mb-sm-0">
+                                                <!-- <div class="col-sm-12 mb-3 mb-sm-0">
                                                     <label for="extimation" class="form-label">Description résumé</label>
                                                     <textarea type="number" class="form-control" id="extimation"
                                                         placeholder="Description de catégorie..."></textarea>
-                                                </div>
+                                                </div> -->
                                             </form>
                                         </div>
                                     </div>
@@ -507,7 +481,7 @@
                                             <td>2008/11/28</td>
                                             <td>2009/07/08</td>
                                             <td><a href="#" class="tooltip-test" title="Alphonso KOUAME">ADM01</a></td>
-                                            
+
                                             <td>
                                                 <button type="button"
                                                     class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
@@ -521,7 +495,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier
+                                                                    article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -531,13 +506,28 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle"
-                                                                                class="form-label">Entrer le libelle du
-                                                                                stock</label>
-                                                                            <input type="text" class="form-control"
-                                                                                id="Libelle" value="ARTICLE 01">
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir le
+                                                                                stocke</label>
+                                                                            <select class="custom-select" name="" id="">
+                                                                                <option value="">Stocke</option>
+                                                                            </select>
                                                                         </div>
-                                                                        
+                                                                        <div class="col-sm-12 mb-3 mb-sm-4">
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir la catégorie
+                                                                                de l'article</label>
+                                                                            <select class="custom-select" name="" id="">
+                                                                                <option value="">Catégorie</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-sm-12 mb-3 mb-sm-4">
+                                                                            <label for="Libelle"
+                                                                                class="form-label">Libelle de
+                                                                                l'article</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="Libelle" value="ARTICLE 02">
+                                                                        </div>
                                                                     </form>
                                                                 </div>
                                                             </div>
@@ -568,7 +558,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel"> Supprimer l'article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">
+                                                                    Supprimer l'article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -626,7 +617,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier
+                                                                    article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -636,13 +628,28 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir le
+                                                                                stocke</label>
+                                                                            <select class="custom-select" name="" id="">
+                                                                                <option value="">Stocke</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-sm-12 mb-3 mb-sm-4">
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir la catégorie
+                                                                                de l'article</label>
+                                                                            <select class="custom-select" name="" id="">
+                                                                                <option value="">Catégorie</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-sm-12 mb-3 mb-sm-4">
                                                                             <label for="Libelle"
-                                                                                class="form-label">Entrer le libelle du
-                                                                                stock</label>
+                                                                                class="form-label">Libelle de
+                                                                                l'article</label>
                                                                             <input type="text" class="form-control"
                                                                                 id="Libelle" value="ARTICLE 02">
                                                                         </div>
-                                                                        
                                                                     </form>
                                                                 </div>
                                                             </div>
@@ -673,7 +680,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer l'article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer
+                                                                    l'article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -731,7 +739,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier
+                                                                    article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -741,13 +750,28 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle"
-                                                                                class="form-label">Entrer le libelle du
-                                                                                stock</label>
-                                                                            <input type="text" class="form-control"
-                                                                                id="Libelle" value="ARTICLE 03">
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir le
+                                                                                stocke</label>
+                                                                            <select class="custom-select" name="" id="">
+                                                                                <option value="">Stocke</option>
+                                                                            </select>
                                                                         </div>
-                                                                        
+                                                                        <div class="col-sm-12 mb-3 mb-sm-4">
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir la catégorie
+                                                                                de l'article</label>
+                                                                            <select class="custom-select" name="" id="">
+                                                                                <option value="">Catégorie</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-sm-12 mb-3 mb-sm-4">
+                                                                            <label for="Libelle"
+                                                                                class="form-label">Libelle de
+                                                                                l'article</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="Libelle" value="ARTICLE 02">
+                                                                        </div>
                                                                     </form>
                                                                 </div>
                                                             </div>
@@ -777,7 +801,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer l'article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer
+                                                                    l'article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -835,7 +860,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier
+                                                                    article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -845,13 +871,28 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle"
-                                                                                class="form-label">Entrer le libelle du
-                                                                                stock</label>
-                                                                            <input type="text" class="form-control"
-                                                                                id="Libelle" value="ARTICLE 04">
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir le
+                                                                                stocke</label>
+                                                                            <select class="custom-select" name="" id="">
+                                                                                <option value="">Stocke</option>
+                                                                            </select>
                                                                         </div>
-                                                                        
+                                                                        <div class="col-sm-12 mb-3 mb-sm-4">
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir la catégorie
+                                                                                de l'article</label>
+                                                                            <select class="custom-select" name="" id="">
+                                                                                <option value="">Catégorie</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-sm-12 mb-3 mb-sm-4">
+                                                                            <label for="Libelle"
+                                                                                class="form-label">Libelle de
+                                                                                l'article</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="Libelle" value="ARTICLE 02">
+                                                                        </div>
                                                                     </form>
                                                                 </div>
                                                             </div>
@@ -881,7 +922,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer l'article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer
+                                                                    l'article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -939,7 +981,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier
+                                                                    article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -949,13 +992,28 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle"
-                                                                                class="form-label">Entrer le libelle du
-                                                                                stock</label>
-                                                                            <input type="text" class="form-control"
-                                                                                id="Libelle" value="ARTICLE 05">
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir le
+                                                                                stocke</label>
+                                                                            <select class="custom-select" name="" id="">
+                                                                                <option value="">Stocke</option>
+                                                                            </select>
                                                                         </div>
-                                                                        
+                                                                        <div class="col-sm-12 mb-3 mb-sm-4">
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir la catégorie
+                                                                                de l'article</label>
+                                                                            <select class="custom-select" name="" id="">
+                                                                                <option value="">Catégorie</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-sm-12 mb-3 mb-sm-4">
+                                                                            <label for="Libelle"
+                                                                                class="form-label">Libelle de
+                                                                                l'article</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="Libelle" value="ARTICLE 02">
+                                                                        </div>
                                                                     </form>
                                                                 </div>
                                                             </div>
@@ -985,7 +1043,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer l'article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer
+                                                                    l'article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -1041,7 +1100,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier
+                                                                    article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -1051,13 +1111,28 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle"
-                                                                                class="form-label">Entrer le libelle du
-                                                                                stock</label>
-                                                                            <input type="text" class="form-control"
-                                                                                id="Libelle" value="ARTICLE 06">
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir le
+                                                                                stocke</label>
+                                                                            <select class="custom-select" name="" id="">
+                                                                                <option value="">Stocke</option>
+                                                                            </select>
                                                                         </div>
-                                                                        
+                                                                        <div class="col-sm-12 mb-3 mb-sm-4">
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir la catégorie
+                                                                                de l'article</label>
+                                                                            <select class="custom-select" name="" id="">
+                                                                                <option value="">Catégorie</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-sm-12 mb-3 mb-sm-4">
+                                                                            <label for="Libelle"
+                                                                                class="form-label">Libelle de
+                                                                                l'article</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="Libelle" value="ARTICLE 02">
+                                                                        </div>
                                                                     </form>
                                                                 </div>
                                                             </div>
@@ -1087,7 +1162,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer l'article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer
+                                                                    l'article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -1144,7 +1220,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier
+                                                                    article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -1154,13 +1231,28 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle"
-                                                                                class="form-label">Entrer le libelle du
-                                                                                stock</label>
-                                                                            <input type="text" class="form-control"
-                                                                                id="Libelle" value="ARTICLE 06">
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir le
+                                                                                stocke</label>
+                                                                            <select class="custom-select" name="" id="">
+                                                                                <option value="">Stocke</option>
+                                                                            </select>
                                                                         </div>
-                                                                        
+                                                                        <div class="col-sm-12 mb-3 mb-sm-4">
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir la catégorie
+                                                                                de l'article</label>
+                                                                            <select class="custom-select" name="" id="">
+                                                                                <option value="">Catégorie</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-sm-12 mb-3 mb-sm-4">
+                                                                            <label for="Libelle"
+                                                                                class="form-label">Libelle de
+                                                                                l'article</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="Libelle" value="ARTICLE 02">
+                                                                        </div>
                                                                     </form>
                                                                 </div>
                                                             </div>
@@ -1190,7 +1282,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer l'article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer
+                                                                    l'article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
