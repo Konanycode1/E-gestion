@@ -11,3 +11,13 @@
 
 => Dans notre fichier server.js on importe le module express et on le stocke dans une variable ou constance comme bon le semble
 => Dans notre fichier server.js on crée en suite une variable ou constance qui sera une instance d'express. Dans mon cas cette viriable va se nommée <app>
+
+=> Installons nodemon grâce à la commande suivante: <npm i nodemon -D>
+    nodemon met à jour le server de namière automatique
+    Après installation de nodemon, on le définit dans le contenu du fichier package.json
+
+
+====================================================================================================================
+==================================================== Mongoosedb ====================================================
+====================================================================================================================
+=> On installe par la suite mongoose grâce à la commande suivante: <npm i mongoose
