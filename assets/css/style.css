@@ -2,13 +2,16 @@
     position: fixed;
 }
 #cards{
-    height: 60vh;
+    
     background-color: blue;
-    border: 1px solid grey;
+    
 }
 .listeProd{
     display: flex;
     flex-direction: column;
+    height: 60vh;
+    border: 1px solid grey;
+
 }
 .eleProd{
     display:flex;
