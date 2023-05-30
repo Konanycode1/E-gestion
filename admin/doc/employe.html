@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E-Gestion | Articles suspendus</title>
+    <title>E-Gestion | Articles</title>
 
     <!-- Custom fonts for this template-->
     <link href="./../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -56,7 +56,7 @@
             <!-- Heading -->
             <div class="sidebar-heading">EXPLORATEUR</div>
 
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="./employe.html" data-target="#acusmuAdmin" aria-expanded="true" aria-controls="acusmuAdmin">
                     <i class="bi bi-boxes fa-cog"></i>
                     <span>Employé</span>
@@ -70,14 +70,16 @@
                     <i class="bi bi-boxes fa-cog"></i>
                     <span>Catégories & Produits</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
 
                         <a class="collapse-item" href="stockages.html"><i class="bi bi-server"> </i> Stocks</a>
                         <a class="collapse-item" href="categories.html"><i class="bi bi-diagram-3-fill"> </i>
                             Catégories</a>
-                        <a class="collapse-item" href="produits.html"><i class="bi bi-pie-chart-fill"> </i> Produits</a>
+                        <a class="collapse-item" href="produits.html"><i class="bi bi-pie-chart-fill"> </i>
+                            Produits</a>
                     </div>
                 </div>
             </li>
@@ -145,13 +147,14 @@
                     aria-controls="collapseGerer">
                     <i class="bi bi-graph-down"></i> <span>Gérer stockes</span>
                 </a>
-                <div id="collapseGerer" class="collapse show" aria-labelledby="headingVentes"
+                <div id="collapseGerer" class="collapse" aria-labelledby="headingVentes"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Gérer stockes:</h6>
                         <a class="collapse-item" href="suspendreArticles.html"> <i class="bi bi-cast"> </i> Suspendre
                             artices</a>
-                        <a class="collapse-item active" href="articleSuspendus.html"> <i class="bi bi-graph-up-arrow"> </i> Articles
+                        <a class="collapse-item" href="articleSuspendus.html"> <i class="bi bi-graph-up-arrow"> </i>
+                            Articles
                             suspendus</a>
                     </div>
                 </div>
@@ -385,6 +388,54 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-2">
                         <h1 class="h3 mb-0 text-gray-800">Articles</h1>
+                        <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                            data-toggle="modal" data-target="#exampleModal">
+                            <i class="bi bi-person-plus"></i> Ajouter article
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ajouter un emùpmloyé</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div>
+                                            <form class="users" method="post" action="http://localhost:3000/create.admin">
+                                                <div class="col-sm-12 mb-3 mb-sm-4">
+                                                    <label for="nomPrenom" class="form-label">Nom et prénom(s)</label>
+                                                    <input type="text" class="form-control" name="nomPrenom" id="nomPrenom" placeholder="nom et prénom de l'employé" required>
+                                                </div>
+                                                <div class="col-sm-12 mb-3 mb-sm-4">
+                                                    <label for="email" class="form-label">Adresse email</label>
+                                                    <input type="email" class="form-control" name="email" id="email" placeholder="Adresse email de l'employé" required>
+                                                </div>
+                                                <div class="col-sm-12 mb-3 mb-sm-4">
+                                                    <label for="telephone" class="form-label">Adresse téléphonique</label>
+                                                    <input type="tel" class="form-control" name="telephone" id="telephone" placeholder="Adresse téléphonique de l'employé" required>
+                                                </div>
+                                                
+                                                <div class="col-sm-12 mb-3 mb-sm-4">
+                                                    <label for="role" class="form-label">Rôle</label>
+                                                    <select class="custom-select" name="role" id="" aria-placeholder="Attribuer un prôle à l'employé">
+                                                        <option value="">Catégorie</option>
+                                                    </select>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="bi bi-x-circle-fill"></i></i> Annuler</button>
+                                                    <button type="submit" class="btn btn-primary"><i class="bi bi-send-check-fill"></i> Enrégistrer</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 
@@ -430,7 +481,7 @@
                                             <td>2008/11/28</td>
                                             <td>2009/07/08</td>
                                             <td><a href="#" class="tooltip-test" title="Alphonso KOUAME">ADM01</a></td>
-                                            
+
                                             <td>
                                                 <button type="button"
                                                     class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
@@ -444,7 +495,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier
+                                                                    article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -454,20 +506,27 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="libelle" class="form-label">Choisir le stocke</label>
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir le
+                                                                                stocke</label>
                                                                             <select class="custom-select" name="" id="">
                                                                                 <option value="">Stocke</option>
                                                                             </select>
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="libelle" class="form-label">Choisir la catégorie de l'article</label>
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir la catégorie
+                                                                                de l'article</label>
                                                                             <select class="custom-select" name="" id="">
                                                                                 <option value="">Catégorie</option>
                                                                             </select>
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle" class="form-label">Libelle de l'article</label>
-                                                                            <input type="text" class="form-control" id="Libelle" value="ARTICLE 02">
+                                                                            <label for="Libelle"
+                                                                                class="form-label">Libelle de
+                                                                                l'article</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="Libelle" value="ARTICLE 02">
                                                                         </div>
                                                                     </form>
                                                                 </div>
@@ -499,7 +558,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel"> Supprimer l'article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">
+                                                                    Supprimer l'article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -557,7 +617,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier
+                                                                    article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -567,20 +628,27 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="libelle" class="form-label">Choisir le stocke</label>
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir le
+                                                                                stocke</label>
                                                                             <select class="custom-select" name="" id="">
                                                                                 <option value="">Stocke</option>
                                                                             </select>
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="libelle" class="form-label">Choisir la catégorie de l'article</label>
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir la catégorie
+                                                                                de l'article</label>
                                                                             <select class="custom-select" name="" id="">
                                                                                 <option value="">Catégorie</option>
                                                                             </select>
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle" class="form-label">Libelle de l'article</label>
-                                                                            <input type="text" class="form-control" id="Libelle" value="ARTICLE 02">
+                                                                            <label for="Libelle"
+                                                                                class="form-label">Libelle de
+                                                                                l'article</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="Libelle" value="ARTICLE 02">
                                                                         </div>
                                                                     </form>
                                                                 </div>
@@ -612,7 +680,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer l'article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer
+                                                                    l'article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -670,7 +739,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier
+                                                                    article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -680,20 +750,27 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="libelle" class="form-label">Choisir le stocke</label>
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir le
+                                                                                stocke</label>
                                                                             <select class="custom-select" name="" id="">
                                                                                 <option value="">Stocke</option>
                                                                             </select>
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="libelle" class="form-label">Choisir la catégorie de l'article</label>
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir la catégorie
+                                                                                de l'article</label>
                                                                             <select class="custom-select" name="" id="">
                                                                                 <option value="">Catégorie</option>
                                                                             </select>
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle" class="form-label">Libelle de l'article</label>
-                                                                            <input type="text" class="form-control" id="Libelle" value="ARTICLE 02">
+                                                                            <label for="Libelle"
+                                                                                class="form-label">Libelle de
+                                                                                l'article</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="Libelle" value="ARTICLE 02">
                                                                         </div>
                                                                     </form>
                                                                 </div>
@@ -724,7 +801,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer l'article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer
+                                                                    l'article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -782,7 +860,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier
+                                                                    article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -792,20 +871,27 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="libelle" class="form-label">Choisir le stocke</label>
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir le
+                                                                                stocke</label>
                                                                             <select class="custom-select" name="" id="">
                                                                                 <option value="">Stocke</option>
                                                                             </select>
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="libelle" class="form-label">Choisir la catégorie de l'article</label>
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir la catégorie
+                                                                                de l'article</label>
                                                                             <select class="custom-select" name="" id="">
                                                                                 <option value="">Catégorie</option>
                                                                             </select>
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle" class="form-label">Libelle de l'article</label>
-                                                                            <input type="text" class="form-control" id="Libelle" value="ARTICLE 02">
+                                                                            <label for="Libelle"
+                                                                                class="form-label">Libelle de
+                                                                                l'article</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="Libelle" value="ARTICLE 02">
                                                                         </div>
                                                                     </form>
                                                                 </div>
@@ -836,7 +922,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer l'article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer
+                                                                    l'article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -894,7 +981,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier
+                                                                    article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -904,20 +992,27 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="libelle" class="form-label">Choisir le stocke</label>
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir le
+                                                                                stocke</label>
                                                                             <select class="custom-select" name="" id="">
                                                                                 <option value="">Stocke</option>
                                                                             </select>
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="libelle" class="form-label">Choisir la catégorie de l'article</label>
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir la catégorie
+                                                                                de l'article</label>
                                                                             <select class="custom-select" name="" id="">
                                                                                 <option value="">Catégorie</option>
                                                                             </select>
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle" class="form-label">Libelle de l'article</label>
-                                                                            <input type="text" class="form-control" id="Libelle" value="ARTICLE 02">
+                                                                            <label for="Libelle"
+                                                                                class="form-label">Libelle de
+                                                                                l'article</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="Libelle" value="ARTICLE 02">
                                                                         </div>
                                                                     </form>
                                                                 </div>
@@ -948,7 +1043,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer l'article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer
+                                                                    l'article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -1004,7 +1100,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier
+                                                                    article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -1014,20 +1111,27 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="libelle" class="form-label">Choisir le stocke</label>
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir le
+                                                                                stocke</label>
                                                                             <select class="custom-select" name="" id="">
                                                                                 <option value="">Stocke</option>
                                                                             </select>
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="libelle" class="form-label">Choisir la catégorie de l'article</label>
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir la catégorie
+                                                                                de l'article</label>
                                                                             <select class="custom-select" name="" id="">
                                                                                 <option value="">Catégorie</option>
                                                                             </select>
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle" class="form-label">Libelle de l'article</label>
-                                                                            <input type="text" class="form-control" id="Libelle" value="ARTICLE 02">
+                                                                            <label for="Libelle"
+                                                                                class="form-label">Libelle de
+                                                                                l'article</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="Libelle" value="ARTICLE 02">
                                                                         </div>
                                                                     </form>
                                                                 </div>
@@ -1058,7 +1162,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer l'article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer
+                                                                    l'article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -1115,7 +1220,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modifier
+                                                                    article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -1125,20 +1231,27 @@
                                                                 <div>
                                                                     <form class="users">
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="libelle" class="form-label">Choisir le stocke</label>
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir le
+                                                                                stocke</label>
                                                                             <select class="custom-select" name="" id="">
                                                                                 <option value="">Stocke</option>
                                                                             </select>
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="libelle" class="form-label">Choisir la catégorie de l'article</label>
+                                                                            <label for="libelle"
+                                                                                class="form-label">Choisir la catégorie
+                                                                                de l'article</label>
                                                                             <select class="custom-select" name="" id="">
                                                                                 <option value="">Catégorie</option>
                                                                             </select>
                                                                         </div>
                                                                         <div class="col-sm-12 mb-3 mb-sm-4">
-                                                                            <label for="Libelle" class="form-label">Libelle de l'article</label>
-                                                                            <input type="text" class="form-control" id="Libelle" value="ARTICLE 02">
+                                                                            <label for="Libelle"
+                                                                                class="form-label">Libelle de
+                                                                                l'article</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="Libelle" value="ARTICLE 02">
                                                                         </div>
                                                                     </form>
                                                                 </div>
@@ -1169,7 +1282,8 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer l'article</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Supprimer
+                                                                    l'article</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
