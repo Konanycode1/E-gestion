@@ -2,7 +2,8 @@ window.addEventListener("DOMContentLoaded", ()=>{
     let allProd =document.querySelector('.allProd')
     let espace = document.querySelector(".espace");
     let takeProduct = document.querySelector(".takeProduct");
-    let groupproduct = document.querySelector(".groupproduct")
+    let groupproduct = document.querySelector(".groupproduct");
+    let total = document.querySelector(".total")
     
 
     allProd.addEventListener('click', (e)=>{
@@ -105,16 +106,30 @@ window.addEventListener("DOMContentLoaded", ()=>{
         let montant = document.querySelector('.montant')
 
         btnCla.forEach(ele => ele.addEventListener("click",(e)=>{
+            montant.focus();
             console.log(e.target.value)
             changeInput(e.target.value)
+           
         }))
 
         
+        function changeInput(event) {   
+            montant.value += event 
+            let content = total.textContent
+            console.log(content)
+            let recup = calcul(montant.value)
+           total.textContent = recup
 
-        function changeInput(event) {
-
-            montant.addEventListener("change", ()=>{
-                montant.value = event
+        }
+        function calcul(values) {
+            let somme =  eval(values)
+            return somme
+            
+        }
+        globalCal()
+        function globalCal(){
+            montant.addEventListener('input', ()=>{
+                total.textContent = eval(montant.value)
             })
         }
         
