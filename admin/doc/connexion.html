@@ -25,12 +25,9 @@
 <body class="bg-gradient-primary">
 
     <div class="container">
-
         <!-- Outer Row -->
         <div class="row justify-content-center">
-
             <div class="col-xl-10 col-lg-12 col-md-9">
-
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
@@ -41,15 +38,14 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">E-Gestion</h1>
                                     </div>
-                                    <form class="user">
+                                    <div id="alerter" class="" role="alert"></div>
+                                     <!-- action="http://localhost:3000/api/loginAdmin"  method="post"  -->
+                                    <form class="formulaire" id="formulaire">
                                         <div class="form-group">
-                                            <input type="email" class="form-control"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Votre numero ">
+                                            <input type="email" id="email" class="form-control" name="email" aria-describedby="emailHelp"placeholder="Atresse email ">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control"
-                                                id="exampleInputPassword" placeholder="mot de passe">
+                                            <input type="password" id="password" class="form-control" name="password" placeholder="Mot de passe">
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -57,19 +53,18 @@
                                                 <label class="custom-control-label" for="customCheck">se rappeler de moi</label>
                                             </div>
                                         </div>
-                                        <a href="./../index.html" class="btn btn-primary btn-user btn-block">
+                                        <button type="submit" class="btn btn-primary btn-block">Connexion</button>
+                                        <button type="reset" class="btn btn-danger btn-user btn-block">Annuler</button>
+                                        <hr>
+                                        <div class="text-center">
+                                            <a class="small" href="forgot-password.html">Mot de passe oublier?</a>
+                                        </div>
+                                        <div class="text-center">
+                                            <a class="small" href="inscription.html">Créer un compte!</a>
+                                        </div>
 
-                                        <a href="./../index.html" class="btn btn-primary btn-block">
-
-                                        </a>
                                     </form>
-                                    <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Mot de passe oublier?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="inscription.html">Créer un compte!</a>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -81,6 +76,39 @@
 
     </div>
 
+
+        <!-- jquery
+		============================================ -->
+    <!-- <script src="./../../assets/vendor/jquery-1.12.4.min.js"></script> -->
+    <!-- bootstrap JS
+		============================================ -->
+    <!-- <script src="./../../assets/script/bootstrap.min.js"></script> -->
+    <!-- wow JS
+		============================================ -->
+    <!-- <script src="./../../assets/script/wow.min.js"></script> -->
+    <!-- price-slider JS
+		============================================ -->
+    <!-- <script src="./../../assets/script/jquery-price-slider.js"></script> -->
+    <!-- meanmenu JS
+		============================================ -->
+    <!-- <script src="./../../assets/script/jquery.meanmenu.js"></script> -->
+    <!-- owl.carousel JS
+		============================================ -->
+    <!-- <script src="./../../assets/script/owl.carousel.min.js"></script> -->
+    <!-- sticky JS
+		============================================ -->
+    <!-- <script src="./../../assets/script/jquery.sticky.js"></script> -->
+    <!-- scrollUp JS
+		============================================ -->
+    <!-- <script src="./../../assets/script/jquery.scrollUp.min.js"></script> -->
+    <!-- mCustomScrollbar JS
+		============================================ -->
+
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+
+
     <!-- Bootstrap core JavaScript-->
     <script src="./../../assets/vendor/jquery/jquery.min.js"></script>
     <script src="./../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -90,6 +118,8 @@
 
     <!-- Custom scripts for all pages-->
     <script src="./../../assets/js/sb-admin-2.min.js"></script>
+    
+    <script src="./../../assets/systemes/connexionAdmin.js"></script>
 
 </body>
 

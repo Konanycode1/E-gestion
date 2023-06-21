@@ -55,9 +55,23 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">EXPLORATEUR</div>
+
+            <li class="nav-item">
+                <a class="nav-link" href="./doc/administrateur.html" data-target="#acusmuAdmin" aria-expanded="true" aria-controls="acusmuAdmin">
+                    <i class="bi bi-boxes fa-cog"></i>
+                    <span>Admininstrateur</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="./doc/role.html" data-target="#acusmuRole" aria-expanded="true" aria-controls="acusmuRole">
+                    <i class="bi bi-boxes fa-cog"></i>
+                    <span>Rôles</span>
+                </a>
+            </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="./doc/employe.html" data-target="#acusmuAdmin" aria-expanded="true" aria-controls="acusmuAdmin">
+                <a class="nav-link" href="./doc/employe.html" data-target="#acusmuEmploye" aria-expanded="true" aria-controls="acusmuEmploye">
                     <i class="bi bi-boxes fa-cog"></i>
                     <span>Emplyé</span>
                 </a>
@@ -398,7 +412,7 @@
 
                         <!-- PRODUITS SORTANTS Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <a href="" class="card border-left-primary shadow h-100 py-2">
+                            <a href="./doc/articlesSortants.html" class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -420,7 +434,7 @@
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <a href="#" class="card border-left-primary shadow h-100 py-2">
+                            <a href="./doc/articlesRestants.html" class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -445,7 +459,7 @@
 
                         <!-- Pending Requests Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <a href="#" class="card border-left-primary shadow h-100 py-2">
+                            <a href="./doc/articlesManquants.html" class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -465,7 +479,7 @@
 
                         <!-- Pending Requests Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <a href="" class="card border-left-primary shadow h-100 py-2">
+                            <a href="./doc/plusConsommes.html" class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -485,7 +499,7 @@
 
                         <!-- Pending Requests Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <a href="#" class="card border-left-primary shadow h-100 py-2">
+                            <a href="./doc/moinsConsommes.html" class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -505,7 +519,7 @@
 
                         <!-- Pending Requests Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <a href="#" class="card border-left-primary shadow h-100 py-2">
+                            <a href="./doc/venteSemaine.html" class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -663,7 +677,7 @@
                     session en cours.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Annuler</button>
-                    <a class="btn btn-primary" href="./doc/connexion.html">Déconnexion</a>
+                    <button class="btn btn-primary" id="deconnexion">Déconnexion</button>
                 </div>
             </div>
         </div>
@@ -685,6 +699,8 @@
     <!-- Page level custom scripts -->
     <script src="./../assets/js/demo/chart-area-demo.js"></script>
     <script src="./../assets/js/demo/chart-pie-demo.js"></script>
+
+    <script src="./../assets/systemes/deconnexion.js"></script>
 
 
 </body>

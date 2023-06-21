@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E-Gestion | Articles restants</title>
+    <title>E-Gestion | Administrateur</title>
 
     <!-- Custom fonts for this template-->
     <link href="./../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -56,6 +56,19 @@
             <!-- Heading -->
             <div class="sidebar-heading">EXPLORATEUR</div>
 
+            <li class="nav-item active">
+                <a class="nav-link" data-target="#acusmuAdmin" aria-expanded="true" aria-controls="acusmuAdmin">
+                    <i class="bi bi-boxes fa-cog"></i>
+                    <span>Administrateur</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./role.html" data-target="#acusmuAdmin" aria-expanded="true" aria-controls="acusmuAdmin">
+                    <i class="bi bi-boxes fa-cog"></i>
+                    <span>Rôle</span>
+                </a>
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="./employe.html" data-target="#acusmuAdmin" aria-expanded="true" aria-controls="acusmuAdmin">
                     <i class="bi bi-boxes fa-cog"></i>
@@ -70,14 +83,16 @@
                     <i class="bi bi-boxes fa-cog"></i>
                     <span>Catégories & Produits</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
 
                         <a class="collapse-item" href="stockages.html"><i class="bi bi-server"> </i> Stocks</a>
                         <a class="collapse-item" href="categories.html"><i class="bi bi-diagram-3-fill"> </i>
                             Catégories</a>
-                        <a class="collapse-item" href="produits.html"><i class="bi bi-pie-chart-fill"> </i> Produits</a>
+                        <a class="collapse-item" href="produits.html"><i class="bi bi-pie-chart-fill"> </i>
+                            Produits</a>
                     </div>
                 </div>
             </li>
@@ -89,14 +104,13 @@
                     <i class="bi bi-gear-wide-connected"></i>
                     <span>Actions sur stocks</span>
                 </a>
-                <div id="collapseAction" class="collapse show" aria-labelledby="headingAction"
+                <div id="collapseAction" class="collapse" aria-labelledby="headingAction"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Actions:</h6>
                         <a class="collapse-item" href="articlesSortants.html"><i class="bi bi-box-arrow-right"></i>
                             Articles sortants</a>
-                        <a class="collapse-item active" href="articlesRestants.html"><i
-                                class="bi  bi-box-arrow-in-left"></i>
+                        <a class="collapse-item" href="articlesRestants.html"><i class="bi  bi-box-arrow-in-left"></i>
                             Articles restants</a>
                     </div>
                 </div>
@@ -385,17 +399,72 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Articles restants</h1>
-                        <button type="button" class="btn btn-sm btn-danger shadow-sm">
-                            <i class="bi bi-coin"></i> Extimés à 17 977 100 FCFA
+                    <div class="d-sm-flex align-items-center justify-content-between mb-2">
+                        <h1 class="h3 mb-0 text-gray-800">Administrateur</h1>
+                        <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                            data-toggle="modal" data-target="#exampleModal">
+                            <i class="bi bi-person-plus"></i> Ajouter administrateur
                         </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ajouter un administrateur</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="alerter" class="" role="alert"></div>
+                                        <div>
+                                            <!-- action="http://localhost:3000/api/saveAdmin" method="POST" -->
+                                            <!-- action="http://localhost:3000/api/saveAdmin"  method="post" -->
+                                            <form class="formulaire" id="formulaire"  enctype="multipart/form-data">
+                                                <div class="col-sm-12 mb-3 mb-sm-4">
+                                                    <label for="nomPrenom" class="form-label">Nom et prénom(s)</label>
+                                                    <input type="text" class="form-control" name="nomPrenom" id="nomPrenom" placeholder="nom et prénom de l'employé" required>
+                                                </div>
+                                                <div class="col-sm-12 mb-3 mb-sm-4">
+                                                    <label for="email" class="form-label">Adresse email</label>
+                                                    <input type="email" class="form-control" name="email" id="email" placeholder="Adresse email de l'employé" required>
+                                                </div>
+                                                <div class="col-sm-12 mb-3 mb-sm-4">
+                                                    <label for="telephone" class="form-label">Adresse téléphonique</label>
+                                                    <input type="text" class="form-control" name="telephone" id="telephone" placeholder="Adresse téléphonique de l'employé" required>
+                                                </div>
+                                                <div class="col-sm-12 mb-3 mb-sm-4">
+                                                    <label for="phot" class="form-label">Photo</label>
+                                                    <input type="file" class="form-control" name="photo" id="photo">
+                                                </div>
+                                                <div class="col-sm-12 mb-3 mb-sm-4">
+                                                    <label for="password" class="form-label">Mot de passe par défaut: <strong>123456</strong></label>
+                                                </div>
+                                                
+                                                <div class="col-sm-12 mb-3 mb-sm-4">
+                                                    <label for="role" class="form-label">Rôle</label>
+                                                    <select class="custom-select" name="role_id" id="role_id" placeholder="Attribuer un rôle">
+                                                        <option value="No role" selected> Attribuer un rôle </option>
+                                                    </select>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="reset" class="btn btn-danger" data-dismiss="modal"><i class="bi bi-x-circle-fill"></i></i> Annuler</button>
+                                                    <button type="submit" class="btn btn-primary"><i class="bi bi-send-check-fill"></i> Enrégistrer</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Liste des articles restants</h6>
+                        <div class="card-header py-1">
+                            <h6 class="m-0 font-weight-bold text-primary">Liste des sous-administrateurs ajoutés</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -403,144 +472,16 @@
                                     <thead>
                                         <tr>
                                             <th>N°</th>
-                                            <th>ID</th>
-                                            <th>Libelle</th>
-                                            <th>Qte</th>
-                                            <th>Prix.U</th>
-                                            <th>Prix.T</th>
-                                            <th>Stocke</th>
-                                            <th>Catégorie</th>
+                                            <th>Nom & Prénom(s)</th>
+                                            <th>Email</th>
+                                            <th>Téléphone</th>
+                                            <th>Rôle</th>
                                             <th>Date Ajout</th>
                                             <th>Date Edit</th>
+                                            <th>Editeur</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>01</td>
-                                            <td>ARTL01</td>
-                                            <td>ARTICLE 01</td>
-                                            <td>50</td>
-                                            <td>1500</td>
-                                            <td>75000</td>
-                                            <td>
-                                                <a href="#" class="tooltip-test" title="STOCKE 01">SK00J1</a>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="tooltip-test" title="CATEGORIE 01">CTG0J1</a>
-                                            </td>
-                                            <td>2008/11/28</td>
-                                            <td>2009/07/08</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>02</td>
-                                            <td>ARTL02</td>
-                                            <td>ARTICLE 02</td>
-                                            <td>50</td>
-                                            <td>1500</td>
-                                            <td>75000</td>
-                                            <td>
-                                                <a href="#" class="tooltip-test" title="STOCKE 01">SK00J1</a>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="tooltip-test" title="CATEGORIE 01">CTG0J1</a>
-                                            </td>
-                                            <td>2008/11/28</td>
-                                            <td>2009/07/08</td>
-
-
-                                        </tr>
-                                        <tr>
-                                            <td>03</td>
-                                            <td>ARTL03</td>
-                                            <td>ARTICLE 03</td>
-                                            <td>50</td>
-                                            <td>1500</td>
-                                            <td>75000</td>
-                                            <td>
-                                                <a href="#" class="tooltip-test" title="STOCKE 01">SK00J1</a>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="tooltip-test" title="CATEGORIE 01">CTG0J1</a>
-                                            </td>
-                                            <td>2008/11/28</td>
-                                            <td>2009/07/08</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>04</td>
-                                            <td>ARTL04</td>
-                                            <td>ARTICLE 04</td>
-                                            <td>50</td>
-                                            <td>1500</td>
-                                            <td>75000</td>
-                                            <td>
-                                                <a href="#" class="tooltip-test" title="STOCKE 01">SK00J1</a>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="tooltip-test" title="CATEGORIE 01">CTG0J1</a>
-                                            </td>
-                                            <td>2008/11/28</td>
-                                            <td>2009/07/08</td>
-
-
-                                        </tr>
-                                        <tr>
-                                            <td>05</td>
-                                            <td>ARTL05</td>
-                                            <td>ARTICLE 05</td>
-                                            <td>50</td>
-                                            <td>1500</td>
-                                            <td>75000</td>
-                                            <td>
-                                                <a href="#" class="tooltip-test" title="STOCKE 01">SK00J1</a>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="tooltip-test" title="CATEGORIE 01">CTG0J1</a>
-                                            </td>
-                                            <td>2008/11/28</td>
-                                            <td>2009/07/08</td>
-
-
-                                        </tr>
-                                        <tr>
-                                            <td>06</td>
-                                            <td>ARTL06</td>
-                                            <td>ARTICLE 06</td>
-                                            <td>50</td>
-                                            <td>1500</td>
-                                            <td>75000</td>
-                                            <td>
-                                                <a href="#" class="tooltip-test" title="STOCKE 01">SK00J1</a>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="tooltip-test" title="CATEGORIE 01">CTG0J1</a>
-                                            </td>
-                                            <td>2008/11/28</td>
-                                            <td>2009/07/08</td>
-
-
-                                        </tr>
-
-                                        <tr>
-                                            <td>07</td>
-                                            <td>ARTL07</td>
-                                            <td>ARTICLE 07</td>
-                                            <td>50</td>
-                                            <td>1500</td>
-                                            <td>75000</td>
-                                            <td>
-                                                <a href="#" class="tooltip-test" title="STOCKE 01">SK00J1</a>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="tooltip-test" title="CATEGORIE 01">CTG0J1</a>
-                                            </td>
-                                            <td>2008/11/28</td>
-                                            <td>2009/07/08</td>
-
-
-                                        </tr>
-                                    </tbody>
+                                    <tbody id="tbody"></tbody>
                                 </table>
                             </div>
                             <nav aria-label="..." class="d-flex justify-content-center">
@@ -607,6 +548,35 @@
             </div>
         </div>
     </div>
+    
+
+    <!-- jquery
+		============================================ -->
+    <script src="./../../assets/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="./../../assets/script/bootstrap.min.js"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="./../../assets/script/wow.min.js"></script>
+    <!-- price-slider JS
+		============================================ -->
+    <script src="./../../assets/script/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="./../../assets/script/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+		============================================ -->
+    <script src="./../../assets/script/owl.carousel.min.js"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="./../../assets/script/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="./../../assets/script/jquery.scrollUp.min.js"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+        
 
     <!-- Bootstrap core JavaScript-->
     <script src="./../../assets/vendor/jquery/jquery.min.js"></script>
@@ -623,7 +593,15 @@
 
     <!-- Page level custom scripts -->
     <script src="./../../assets/js/demo/chart-area-demo.js"></script>
-    <script src="./../../assets/js/demo/chart-pie-demo.js"></script> <script src="./../../assets/systemes/deconnexion.js"></script>
+    <script src="./../../assets/js/demo/chart-pie-demo.js"></script>
+
+
+    <script src="./../../assets/systemes/administrateur.js"></script>
+    <script src="./../../assets/systemes/deconnexion.js"></script>
+    
+    
+    
+    
 
 
 </body>
