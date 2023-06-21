@@ -1,0 +1,66 @@
+#accordionSidebar, nav{
+    position: fixed;
+}
+#page-top{
+background-color: dimgrey;
+}
+p,h1,h2,h3,h4,h5,h6{
+    color: white;
+}
+
+.listeProd{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    border: 1px solid grey;
+    overflow: hidden;
+    overflow-y: scroll;
+
+}
+.listeProd::-webkit-scrollbar {
+    display: none;
+  }
+  .listeProd {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+  }
+.eleProd{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn-nbr{
+    width:7rem;
+    height:7rem;
+    
+}
+i{
+    font-size:2rem;
+    color: white;
+}
+.btn-Ege{
+    outline: auto;
+    outline-style: ridge;
+    background-color: azure;
+    outline-color: rgb(83, 240, 240);
+}
+.produit{
+    margin-bottom: .8rem;
+}
+.row .groupproduct{
+    display: none;
+}
+.groupproduct{
+    padding: .8rem;
+    height: 90vh;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.groupproduct::-webkit-scrollbar {
+    display: none;
+  }
+  .groupproduct {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+  }
