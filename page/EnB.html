@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="./../assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -34,61 +35,61 @@
                     <div class="col-lg-12">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Enregistrer d'une boutique !!!</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Enregistrer une boutique !!!</h1>
                             </div>
-                            <form class="user">
+                            <form class="user" id="signupB">
                                 <div class="form-group row">
                                     <div class="col-sm-4 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                        <input type="text" class="form-control form-control-user" name="nomBoutique" id="nomBoutique"
                                             placeholder="Nom de la boutique">
                                     </div>
                                     <div class="col-sm-4">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                        <input type="text" class="form-control form-control-user" name="localisation" id="localisation"
                                             placeholder="Localisation">
                                     </div>
                                     <div class="col-sm-4">
-                                        <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                        <input type="email" class="form-control form-control-user" name="email" id="email"
                                         placeholder=" Adesse Email">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <input type="number" class="form-control form-control-user" id="exampleInputEmail"
+                                            <input type="number" class="form-control form-control-user" name="numero" id="numero"
                                                 placeholder="Numéro de la boutique">
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <input type="number" class="form-control form-control-user" id="exampleInputEmail"
+                                            <input type="number" class="form-control form-control-user" name="numeroFixe" id="numeroFixe"
                                                 placeholder="Numéro fixe">
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <input type="file" class="form-control-file form-control-user" id="exampleInputEmail"
+                                            <input type="file" class="form-control-file form-control-user" name="logo" id="logo"
                                                 placeholder="logo de la boutique">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-4">
-                                        <input type="text" class="form-control form-control-user" id="exampleInputEmail"
+                                        <input type="text" class="form-control form-control-user" name="ville" id="ville"
                                         placeholder=" ville">
                                     </div>
                                     <div class="col-sm-4 mb-3 mb-sm-0">
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Mot de passe">
+                                            id="password" name="password" placeholder="Mot de passe">
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-4">  
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Comfirmer le mot de passe">
+                                            id="cpassword" name="cpassword" placeholder="Comfirmer le mot de passe">
                                     </div>
                                     
                                 </div>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                <button class="btn btn-primary btn-user btn-block btnBoutik">
                                     Enregistrer une boutique
-                                </a>
+                                </button>
                                 <hr>
                                 <!-- <a href="./../index.html" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> Register with Google
@@ -113,7 +114,8 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="./../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../conso/register.js"></script>
+    <!-- <script src="./../assets/vendor/jquery/jquery.min.js"></script> -->
     <script src="./../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
