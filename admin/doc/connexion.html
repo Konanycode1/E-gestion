@@ -38,23 +38,28 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">E-Gestion</h1>
                                     </div>
-                                    <div id="alerter" class="" role="alert"></div>
                                      <!-- action="http://localhost:3000/api/loginAdmin"  method="post"  -->
-                                    <form class="formulaire" id="formulaire">
+                                    <form class="formulaire" id="formulaire" name="formulaire">
                                         <div class="form-group">
-                                            <input type="email" id="email" class="form-control" name="email" aria-describedby="emailHelp"placeholder="Atresse email ">
+                                            <label for="personnel">Me connecter en tant que:</label>
+                                            <select name="personnel" id="personnel" class="form-control" required>
+                                                <option value="" selected>Veuillez choisir votre statut ?</option>
+                                                <option value="administrateur">Administrateur</option>
+                                                <option value="employe">Employé</option>
+                                            </select>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" id="password" class="form-control" name="password" placeholder="Mot de passe">
+                                            <input type="email" id="email" class="form-control" name="email" aria-describedby="emailHelp"placeholder="Adresse email " required>
                                         </div>
                                         <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">se rappeler de moi</label>
-                                            </div>
+                                            <input type="password" id="password" class="form-control" name="password" placeholder="Mot de passe" required>
                                         </div>
+                                        
                                         <button type="submit" class="btn btn-primary btn-block">Connexion</button>
                                         <button type="reset" class="btn btn-danger btn-user btn-block">Annuler</button>
+                                        <br>
+                                        <div role="alert" id="alerter"></div>
+                                        
                                         <hr>
                                         <div class="text-center">
                                             <a class="small" href="forgot-password.html">Mot de passe oublier?</a>
@@ -62,7 +67,6 @@
                                         <div class="text-center">
                                             <a class="small" href="inscription.html">Créer un compte!</a>
                                         </div>
-
                                     </form>
                                     
                                 </div>
@@ -119,7 +123,8 @@
     <!-- Custom scripts for all pages-->
     <script src="./../../assets/js/sb-admin-2.min.js"></script>
     
-    <script src="./../../assets/systemes/connexionAdmin.js"></script>
+    <!-- <script src="./../../assets/systemes/connexionAdmin.js"></script> -->
+    <script src="./../../assets/systemes/connexion.js"></script>
 
 </body>
 

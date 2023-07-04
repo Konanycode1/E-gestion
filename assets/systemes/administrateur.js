@@ -1,7 +1,17 @@
 window.addEventListener(`DOMContentLoaded`, (e)=>{
         let alerter = document.getElementById("alerter");
         let role_id = document.getElementById(`role_id`);
-        let formulaire = $(`#formulaire`);
+        const formulaire=document.getElementById('formulaire');
+        formulaire.addEventListener('submit', event=>{
+            event.preventDefault();
+            const personnel=document.getElementById('personnel').value;
+            let formData=new FormData(formulaire);
+        })
+
+
+
+
+
         $(formulaire).submit(async function(event) {
             event.preventDefault();
             let nomPrenom=$('#nomPrenom').val();
@@ -25,7 +35,6 @@ window.addEventListener(`DOMContentLoaded`, (e)=>{
             let all=await fetch("http://localhost:3000/api/saveAdmin",{
                 method: "POST",
                 body: data,
-                // headers:{Authorization: `token ${JSON.parse(localStorage.SESSION_E_GESTION).token}`}
             })
             .then(response=>{
                 console.log('aaaaaa',response);
