@@ -445,7 +445,7 @@
                                                 <div class="col-sm-12 mb-3 mb-sm-4">
                                                     <label for="role" class="form-label">Rôle</label>
                                                     <select class="custom-select" name="role_id" id="role_id" placeholder="Attribuer un rôle" required>
-                                                        <option value="No role" selected> Attribuer un rôle </option>
+                                                        <option value="" selected> Attribuer un rôle </option>
                                                     </select>
                                                 </div>
                                                 <div class="modal-footer">
@@ -487,15 +487,15 @@
                             <nav aria-label="..." class="d-flex justify-content-center">
                                 <ul class="pagination">
                                     <li class="page-item disabled">
-                                        <span class="page-link">Précédent</span>
+                                        <span class="page-link" id="previous">Précédent</span>
                                     </li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
                                     <li class="page-item active" aria-current="page">
-                                        <span class="page-link">2</span>
+                                        <span class="page-link">2/5</span>
                                     </li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <!-- <li class="page-item"><a class="page-link" href="#">3</a></li> -->
                                     <li class="page-item">
-                                        <a class="page-link" href="#">Suivant</a>
+                                        <a class="page-link" href="#" id="next">Suivant</a>
                                     </li>
                                 </ul>
                             </nav>
