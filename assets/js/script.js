@@ -90,7 +90,6 @@ window.addEventListener("DOMContentLoaded", ()=>{
 
         let closed = document.querySelector(".closed")
         console.log(closed)
-
         e.target.desabled = true
 
         closed.addEventListener("click", (e)=>{

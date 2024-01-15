@@ -1,8 +1,17 @@
+*{
+    box-shadow: inset ;
+    box-sizing: border-box;
+    
+}
+
 #accordionSidebar, nav{
     position: fixed;
+    
 }
 #page-top{
 background-color: dimgrey;
+width:100%;
+
 }
 p,h1,h2,h3,h4,h5,h6{
     color: white;
@@ -64,3 +73,23 @@ i{
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
   }
+ 
+  @media (max-width:996px) {
+    .change-row{
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    .btnLigne{
+        display: flex;
+    }
+    .listeProd{
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+        border: 1px solid grey;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    }
+  }
+  
